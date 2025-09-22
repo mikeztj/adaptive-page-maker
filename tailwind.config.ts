@@ -47,6 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom health theme colors
+        "health-primary": "hsl(var(--health-primary))",
+        "health-secondary": "hsl(var(--health-secondary))",
+        "health-bg": "hsl(var(--health-bg))",
+        "health-light": "hsl(var(--health-light))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +67,14 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-health": "var(--gradient-health)",
+        "gradient-bg": "var(--gradient-bg)",
+      },
+      boxShadow: {
+        "soft": "var(--shadow-soft)",
+        "float": "var(--shadow-float)",
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +93,20 @@ export default {
             height: "0",
           },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
