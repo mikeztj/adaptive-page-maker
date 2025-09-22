@@ -4,7 +4,7 @@ import healthyOneLogo from "@/assets/healthy-one-logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-health relative overflow-hidden">
+    <section className="min-h-screen bg-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-health-secondary/20 rounded-full blur-3xl" />
@@ -52,7 +52,9 @@ const HeroSection = () => {
             {/* Google Play Button */}
             <div className="flex items-center space-x-4">
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.indoapotekhealthyone.release"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-3 bg-black hover:bg-gray-800 text-white px-6 py-4 rounded-2xl transition-all duration-300 hover:shadow-float hover:scale-105 group"
               >
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
