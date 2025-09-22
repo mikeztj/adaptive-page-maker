@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/healthcare-hero.jpg";
+import healthyOneLogo from "@/assets/healthy-one-logo.png";
 
 const HeroSection = () => {
   return (
@@ -15,14 +16,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
         {/* Header */}
         <header className="flex items-center justify-between mb-16">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-health-primary rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 8h2v8H4V8zm4-4h2v12H8V4zm4 1h2v10h-2V5z"/>
-              </svg>
-            </div>
+          <div className="flex items-center space-x-4">
+            <img 
+              src={healthyOneLogo} 
+              alt="Healthy One Logo" 
+              className="w-16 h-16 object-contain"
+            />
             <div>
-              <h1 className="font-bold text-xl text-health-primary">Healthy One</h1>
               <p className="text-sm text-health-primary/70">Teman sehatmu setiap hari.</p>
             </div>
           </div>
