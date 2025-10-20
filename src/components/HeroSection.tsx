@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { Building2 } from "lucide-react";
 import heroImage from "@/assets/healthcare-hero.jpg";
 import healthyOneLogo from "@/assets/healthy-one-logo.png";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen bg-white relative overflow-hidden">
       {/* Background decorative elements */}
@@ -49,8 +53,8 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Google Play Button */}
-            <div className="flex items-center space-x-4">
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-4">
               <a
                 href="https://play.google.com/store/apps/details?id=com.indoapotekhealthyone.release"
                 target="_blank"
@@ -65,6 +69,16 @@ const HeroSection = () => {
                   <div className="text-sm font-semibold">Google Play</div>
                 </div>
               </a>
+              
+              <Button
+                onClick={() => navigate("/company-profile")}
+                variant="outline"
+                size="lg"
+                className="flex items-center space-x-2 px-6 py-4 h-auto rounded-2xl hover:shadow-float hover:scale-105 transition-all duration-300"
+              >
+                <Building2 className="w-5 h-5" />
+                <span>Company Profile</span>
+              </Button>
             </div>
           </div>
 
