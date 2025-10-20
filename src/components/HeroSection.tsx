@@ -18,7 +18,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 py-8 lg:py-16 relative z-10">
-        {/* Header */}
+        {/* Header with Navigation */}
         <header className="flex items-center justify-between mb-16">
           <div className="flex items-center space-x-4">
             <img 
@@ -30,6 +30,18 @@ const HeroSection = () => {
               <p className="text-sm text-health-primary/70">Teman sehatmu setiap hari.</p>
             </div>
           </div>
+          
+          {/* Navigation Bar */}
+          <nav className="flex items-center gap-2">
+            <Button
+              onClick={() => navigate("/company-profile")}
+              variant="ghost"
+              className="text-health-primary hover:text-health-secondary hover:bg-health-primary/5 transition-all duration-300"
+            >
+              <Building2 className="mr-2 h-4 w-4" />
+              Company Profile
+            </Button>
+          </nav>
         </header>
 
         {/* Main content */}
@@ -53,8 +65,8 @@ const HeroSection = () => {
               </p>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            {/* Google Play Button */}
+            <div className="flex items-center space-x-4">
               <a
                 href="https://play.google.com/store/apps/details?id=com.indoapotekhealthyone.release"
                 target="_blank"
@@ -69,16 +81,6 @@ const HeroSection = () => {
                   <div className="text-sm font-semibold">Google Play</div>
                 </div>
               </a>
-              
-              <Button
-                onClick={() => navigate("/company-profile")}
-                variant="outline"
-                size="lg"
-                className="flex items-center space-x-2 px-6 py-4 h-auto rounded-2xl hover:shadow-float hover:scale-105 transition-all duration-300"
-              >
-                <Building2 className="w-5 h-5" />
-                <span>Company Profile</span>
-              </Button>
             </div>
           </div>
 
